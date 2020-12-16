@@ -57,7 +57,6 @@
 <script>
 import draggable from 'vuedraggable'
 
-
 export default {
   name: 'App',
   components: {

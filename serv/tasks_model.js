@@ -47,7 +47,6 @@ const getDoneTask = () => {
         });
     })
 }
-var a =1
 const createTask = (body) => {
     return new Promise(function(resolve, reject) {
         const { task } = body

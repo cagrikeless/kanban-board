@@ -5,6 +5,7 @@ const port = 8080
 
 const tasks_model = require('./tasks_model')
 
+
 app.use(express.json())
 app.use(function (req, res, next) {
   res.setHeader('Access-Control-Allow-Origin', 'http://localhost:8080');
@@ -15,6 +16,9 @@ app.use(function (req, res, next) {
 
 app.get('/', (req,res) => {
     tasks_model.getBacklogTask()
+    tasks_model.getINProgressTask()
+    tasks_model.getTestedTask()
+    tasks_model.getDoneTask()
     .then(response => {
         res.status(200).send(response);
     })
