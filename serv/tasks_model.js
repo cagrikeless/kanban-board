@@ -37,7 +37,16 @@ const getTestedTask = () => {
         })
     })
 }
-
+const getDoneTask = () => {
+    return new Promise(function(resolve, reject) {
+        pool.query('SELECT DONE FROM TASKS', (error, reject) => {
+            if (error) {
+                reject(error)
+            }
+            resolve(results.rows);
+        });
+    })
+}
 
 
 
