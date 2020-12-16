@@ -1,7 +1,7 @@
 {
     "name": "node-postgres",
     "version": "1.0.0",
-    "description": "Learn how NodeJS and Express can interact with PostgreSQL",
+    "description": "NodeJS and Express can interact with PostgreSQL -cagrikeles",
     "main": "server.js",
     "license": "ISC"
   }
