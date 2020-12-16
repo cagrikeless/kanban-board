@@ -51,7 +51,7 @@ var a =1
 const createTask = (body) => {
     return new Promise(function(resolve, reject) {
         const { task } = body
-        pool.query('INSERT INTO TASKS (BACKLOG) VALUES (1,2) RETURNING *', [BACKLOG], (error,results) => {
+        pool.query('INSERT INTO TASKS (BACKLOG) VALUES (1) RETURNING *', [BACKLOG], (error,results) => {
             if (error) {
                 reject(error);
             }
