@@ -21,8 +21,13 @@ app.get('/', (req,res) => {
     tasks_model.getDoneTask()
     .then(response => {
         res.status(200).send(response);
+        res.send(tasks_model.getBacklogTask())
+        res.send(tasks_model.getINProgressTask())
+        res.send(tasks_model.getTestedTask())
+        res.send(tasks_model.getDoneTask())
     })
     .catch(error => {
         res.status(500).send(error);
+        throw new Error('database failed to connect');
       })
 })
